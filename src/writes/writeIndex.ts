@@ -3,7 +3,7 @@ import util from 'util';
 const fs_writeFile = util.promisify(fs.writeFile);
 import path from 'path';
 import { checkDir } from '../checks/checkDir';
-import { FILETYPE, COMMENTSTRING, NAMESPACETYPE } from '../types';
+import { FILETYPE, COMMENTSTRING, NAMESPACETYPE, LINTDISABLE } from '../types';
 
 type CONFIG = {
   NAMESPACE: NAMESPACETYPE;
@@ -17,6 +17,7 @@ export function writeIndex(pathToDir: string, config: CONFIG) {
   );
   let finalString: string[] = [
     COMMENTSTRING,
+    LINTDISABLE,
     '',
     '// for more info: https://github.com/sw-yx/barrelbot'
   ];
