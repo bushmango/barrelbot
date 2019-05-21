@@ -23,15 +23,15 @@
     "Barrelsby"
   ],
   "dependencies": {
-    "chokidar": "^2.1.1",
-    "yargs": "^13.2.0"
+    "chokidar": "3.0.0",
+    "yargs": "13.2.4"
   },
   "devDependencies": {
-    "@types/chokidar": "^1.7.5",
-    "@types/node": "^11.9.4",
-    "@types/yargs": "^12.0.9",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.3.3"
+    "@types/chokidar": "2.1.3",
+    "@types/node": "12.0.2",
+    "@types/yargs": "13.0.0",
+    "ts-node": "8.1.0",
+    "typescript": "3.4.5"
   },
   "files": [
     "tsconfig.json",
