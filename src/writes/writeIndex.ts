@@ -27,10 +27,20 @@ export function writeIndex(pathToDir: string, config: CONFIG) {
     '',
     '// for more info: https://github.com/sw-yx/barrelbot'
   ];
+  let filesWritten = 0
   allFilesExceptIndex.forEach(filePath => {
     const newLine = createExportLine(filePath, config);
-    if (newLine) finalString.push(newLine);
+    if (newLine) { f
+      finalString.push(newLine);
+      filesWritten++
+    }
   });
+
+  // Don't write an index file if there are no files!
+  if(filesWritten === 0) {
+    return Promise.resolve()
+  }
+
 
   // write
   return fs_writeFile(indexFilePath, finalString.join('\n'));
