@@ -30,7 +30,7 @@ export function writeIndex(pathToDir: string, config: CONFIG) {
   let filesWritten = 0
   allFilesExceptIndex.forEach(filePath => {
     const newLine = createExportLine(filePath, config);
-    if (newLine) { f
+    if (newLine) { 
       finalString.push(newLine);
       filesWritten++
     }
