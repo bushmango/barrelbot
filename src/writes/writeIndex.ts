@@ -15,6 +15,12 @@ export function writeIndex(pathToDir: string, config: CONFIG) {
     pathToDir,
     config.EXTENSION
   );
+
+  // Don't write an index file if there are no files!
+  if(allFilesExceptIndex.length === 0) {
+    return Promise.resolve()
+  }
+
   let finalString: string[] = [
     COMMENTSTRING,
     LINTDISABLE,
