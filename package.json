@@ -11,7 +11,8 @@
   },
   "homepage": "https://github.com/sw-yx/barrelbot#readme",
   "bin": {
-    "barrelbot": "bin/barrelbot"
+    "barrelbot": "bin/barrelbot",
+    "barrelbot-fixed": "bin/barrelbot"
   },
   "scripts": {
     "build": "tsc -p ."
